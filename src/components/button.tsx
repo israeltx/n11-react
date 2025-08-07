@@ -1,7 +1,8 @@
 type Props = {
   name: string
+  onClick?: () => void
 }
 
-export function Button(props: Props) {
-  return <button>{props.name}</button>
+export function Button({name, onClick}: Props) {
+  return <button onClick={onClick}>{name}</button>
 }
