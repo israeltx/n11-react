@@ -1,13 +1,12 @@
+import { useMessage } from "./hooks/useMessage";
 import { Button } from "./components/button";
-import styles from "./app.module.css"
 import { useState, useEffect } from "react";
+import styles from "./app.module.css"
 import "./global.css"
-
-// import { useMessage } from "./hooks/useMessage";
 
 export function App() {
   const [count, setCount] = useState(0)
-  // const { show } = useMessage({name: 'Israel'})
+  const message = useMessage({name: 'Israel'})
 
   useEffect(() => {
     console.log('Oi');
