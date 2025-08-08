@@ -1,6 +1,6 @@
 import { Button } from "./components/button";
 import styles from "./app.module.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./global.css"
 
 // import { useMessage } from "./hooks/useMessage";
@@ -8,6 +8,10 @@ import "./global.css"
 export function App() {
   const [count, setCount] = useState(0)
   // const { show } = useMessage({name: 'Israel'})
+
+  useEffect(() => {
+    console.log('Oi');
+  }, [])
 
   return (
     <div className={styles.container}>
